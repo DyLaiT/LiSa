@@ -10,7 +10,6 @@ services:
       - "./data/storage:/home/lisa/data/storage"
     depends_on:
       - rabbitmq
-      - worker
     networks:
       lisanet:
         ipv4_address: 172.42.0.10
@@ -30,6 +29,8 @@ services:
       - "net.ipv6.conf.all.disable_ipv6=0"
     cap_add:
       - NET_ADMIN
+    depends_on:
+      - api
     networks:
       lisanet:
     restart: on-failure
