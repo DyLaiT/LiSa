@@ -269,8 +269,12 @@ class NetworkAnalyzer(AbstractSubAnalyzer):
 
         if self._local_ip is None:
             self._local_ip = disspcap.most_common_ip(self._pcap_path)
+        try:
+            pcap = disspcap.Pcap(self._pcap_path)
+        except FileNotFoundError:
+            log.info('pcap file not found.')
+            return
 
-        pcap = disspcap.Pcap(self._pcap_path)
 
         while True:
 

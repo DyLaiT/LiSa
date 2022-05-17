@@ -76,7 +76,7 @@ class QEMUGuest():
             return None
 
         self._proc.sendline(command)
-        self._proc.expect(self._prompt)
+        self._proc.expect([self._prompt, pexpect.EOF])
         return self._proc.before
 
     def start_vm(self, disable_ipv6=True):
@@ -97,11 +97,11 @@ class QEMUGuest():
         )
 
         # login
-        self._proc.expect('login: ')
+        self._proc.expect(['login: ', pexpect.EOF])
         self._proc.sendline('root')
-        self._proc.expect('[pP]assword: ')
+        self._proc.expect(['[pP]assword: ', pexpect.EOF])
         self._proc.sendline('root')
-        self._proc.expect(self._prompt)
+        self._proc.expect([self._prompt, pexpect.EOF])
 
         self._is_running = True
 
@@ -135,7 +135,7 @@ class QEMUGuest():
     def poweroff_vm(self):
         """Shutdowns guest VM."""
         self._proc.sendline('sync')
-        self._proc.expect(self._prompt)
+        self._proc.expect([self._prompt, pexpect.EOF])
         self._proc.sendline('poweroff')
         self._proc.expect(pexpect.EOF)
         self._proc.logfile.close()
@@ -178,5 +178,5 @@ class QEMUGuest():
         command = 'ifconfig eth0 | awk \'/inet addr/ '
         command += '{gsub("addr:", "", $2); print $2}\''
         self._proc.sendline(command)
-        self._proc.expect('10.0.2.*\r\n')
+        self._proc.expect(['10.0.2.*\r\n', pexpect.EOF])
         return self._proc.after.strip()
