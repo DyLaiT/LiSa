@@ -4,6 +4,10 @@ __pycache__/
 *$py.class
 .pytest_cache/
 
+# personal compose yml
+docker-compose.yml
+radare2/*
+
 # Builded C libraries
 *.so
 
