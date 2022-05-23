@@ -9,8 +9,7 @@ analyzers_config = [
     'lisa.analysis.static_analysis.StaticAnalyzer',
     'lisa.analysis.dynamic_analysis.DynamicAnalyzer',
     'lisa.analysis.network_analysis.NetworkAnalyzer',
-
-    # 'lisa.analysis.virustotal.VirusTotalAnalyzer'
+    'lisa.analysis.virustotal.VirusTotalAnalyzer'
 
     # custom modules
 ]
