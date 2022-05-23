@@ -79,7 +79,7 @@ class ReportStatic extends Component {
   };
 
   render() {
-    let pagination = { pageSize: 15, size: "small" };
+    let pagination = { pageSize: 5, size: "default" };
 
     let filesPagination = this.openFiles.length === 0 ? false : pagination;
 

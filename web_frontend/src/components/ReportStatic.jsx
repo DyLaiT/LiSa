@@ -232,7 +232,7 @@ class ReportStatic extends Component {
   }
 
   render() {
-    const pagination = { pageSize: 15, size: "small" };
+    const pagination = { pageSize: 5, size: "default" };
 
     const libsPagination = this.libs.length === 0 ? false : pagination;
     const stringsPagination = this.strings.length === 0 ? false : pagination;

@@ -178,7 +178,7 @@ class ReportNetwork extends Component {
   };
 
   render() {
-    let pagination = { pageSize: 10, size: "small" };
+    let pagination = { pageSize: 5, size: "default" };
 
     let ircPagination = this.ircMessages.length === 0 ? false : pagination;
 
