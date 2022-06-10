@@ -10,7 +10,7 @@ class SubmitPage extends Component {
     this.state = {
       file: "",
       type: "",
-      exectime: 20,
+      exectime: 120,
       status: "",
       uploading: false,
       task_id: ""
@@ -160,7 +160,7 @@ class SubmitPage extends Component {
               className="upload-form-exectime-input"
               min={10}
               max={1000}
-              defaultValue={20}
+              defaultValue={120}
               onChange={this.handleInputExecutionTime}
             />
           </div>

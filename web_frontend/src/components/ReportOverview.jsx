@@ -68,6 +68,14 @@ class ReportOverview extends Component {
       {
         key: "Endianess",
         value: r.static_analysis.binary_info.endianess
+      },
+      {
+        key: "Yara Hits",
+        value: r.yarasea.yara_matches
+      },
+      {
+        key: "VT Hits",
+        value: r.virustotal
       }
     ];
 
