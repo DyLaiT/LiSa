@@ -203,3 +203,5 @@ Contributions | feedback | issues | pull requests are welcome.
 ## License
 
 LiSa is licensed under [Apache License 2.0](LICENSE).
+
+Yara-Rules project [github](https://github.com/Yara-Rules/rules).

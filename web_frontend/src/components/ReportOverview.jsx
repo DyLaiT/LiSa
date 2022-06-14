@@ -74,8 +74,20 @@ class ReportOverview extends Component {
         value: r.yarasea.yara_matches
       },
       {
-        key: "VT Hits",
-        value: r.virustotal
+        key: "VT Fortinet",
+        value: r.virustotal.scans.Fortinet.result
+      },
+      {
+        key: "VT Avast",
+        value: r.virustotal.scans.Avast.result
+      },
+      {
+        key: "VT TrendMicro",
+        value: r.virustotal.scans.TrendMicro.result
+      },
+      {
+        key: "VT McAfee",
+        value: r.virustotal.scans.McAfee.result
       }
     ];
 

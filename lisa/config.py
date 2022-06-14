@@ -10,8 +10,7 @@ analyzers_config = [
     'lisa.analysis.dynamic_analysis.DynamicAnalyzer',
     'lisa.analysis.network_analysis.NetworkAnalyzer',
     'lisa.analysis.yarasea.YaraSeaAnalyzer',
-
-    # 'lisa.analysis.virustotal.VirusTotalAnalyzer'
+    'lisa.analysis.virustotal.VirusTotalAnalyzer',
 
     # custom modules
 ]
